@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dandan生日快乐</title>
+
+    <!--烟花-->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/hovertree.css">
+
+</head>
+<body>
+<!--烟花-->
+<div class="hovertree">
+    <div>
+        <p style="text-align: center; color: #EFFBEF; margin-top: 25%; font-size: 40px">
+            祝Dandan生日快乐！
+        </p>
+    </div>
+</div>
+<a href="../index.html">返回</a>
+<script src='../js/jquery.js'></script>
+<script type="text/javascript" src="../js/jquery.fireworks.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        // 屏幕的尺寸
+        let screenW = document.documentElement.clientWidth;
+        let screenH = document.documentElement.clientHeight;
+
+        // 2. 动态创建多个星星
+        for(let i=0; i<150; i++){
+            let span = document.createElement('span');
+            document.body.appendChild(span);
+
+            //位置随机
+            let x = parseInt(Math.random() * screenW);
+            let y = parseInt(Math.random() * screenH);
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+
+            //大小随机
+            let scale = Math.random() * 1.5;
+            span.style.transform = 'scale('+ scale + ', ' + scale + ')';
+
+            //频率随机
+            let rate = Math.random() * 1.5;
+            span.style.animationDelay = rate + 's';
+        }
+    }
+
+    $('.hovertree').fireworks({
+        sound: true, // sound effect
+        opacity: 0.9,
+        width: '100%',
+        height: '100%'
+    });
+
+</script>
+<audio src="../music/陈奕迅-天下无双.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>

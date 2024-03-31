@@ -26,16 +26,16 @@ function setUserName() {
         return;
     }
     localStorage.setItem("name", name);
-    head1.textContent = "Mozilla 酷毙了，" + name;
+    head1.textContent = "你个老6酷毙了，" + name;
 }
 
 button.onclick = function () {
-    setUserName();
+    window.location.href = "birthday/index.html";
 }
 
 if (!localStorage.getItem("name")) {
     setUserName();
 } else {
     let name = localStorage.getItem("name");
-    head1.textContent = "Mozilla 酷毙了，" + name;
+    head1.textContent = "你个老6酷毙了，" + name;
 }
