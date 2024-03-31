@@ -1,0 +1,35 @@
+html {
+    font-size: 10px;
+    background-color: #00539f;
+}
+
+body{
+    width: 600px;
+    margin: 0 auto; /* 与父容器的距离（外边距），上下0，左右平均分布*/
+    background-color: #ff9500;
+    padding: 0 20px 20px 20px; /* 内边距，顺时针，上0，右20px，下20px，左20px */
+    border: 5px solid black; /* 边框，5px，实线，黑色*/
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+img {
+    display: block; /* 显示块级元素 */
+    margin: 0 auto;
+}
+
+
+
